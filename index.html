@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jhoys Alcántara – Página Personal</title>
+  <meta name="description" content="Página personal de Jhoys Argenis Alcántara Vargas: datos de contacto, idiomas, horario académico y formación." />
+  <style>
+    :root {
+      --bg: #0f172a;       /* slate-900 */
+      --panel: #111827;    /* gray-900 */
+      --muted: #94a3b8;    /* slate-400 */
+      --text: #e5e7eb;     /* gray-200 */
+      --accent: #22d3ee;   /* cyan-400 */
+      --accent-2: #60a5fa; /* blue-400 */
+      --ring: rgba(34,211,238,.35);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(34,211,238,.08), transparent),
+                  radial-gradient(1000px 700px at 110% 10%, rgba(96,165,250,.08), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(to bottom, rgba(15,23,42,.85), rgba(15,23,42,.55));
+      border-bottom: 1px solid rgba(148,163,184,.15);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px; max-width: 1000px; margin: 0 auto; }
+    .brand { font-weight: 700; letter-spacing: .3px; }
+    nav a { color: var(--text); text-decoration: none; margin-left: 16px; font-size: .95rem; opacity: .85; }
+    nav a:hover { opacity: 1; color: var(--accent); }
+
+    .hero { padding: 56px 24px 24px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 8px; }
+    .hero p { color: var(--muted); margin: 0; }
+
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border: 1px solid rgba(148,163,184,.15);
+      border-radius: var(--radius);
+      padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    @media (min-width: 800px) {
+      .span-6 { grid-column: span 6; }
+      .span-7 { grid-column: span 7; }
+      .span-5 { grid-column: span 5; }
+    }
+    h2 { font-size: clamp(20px, 3vw, 28px); margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+    .list {
+      list-style: none; padding: 0; margin: 0; display: grid; gap: 6px;
+    }
+    .list li { display: flex; align-items: start; gap: 10px; }
+    .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,.2); background: rgba(148,163,184,.07); }
+
+    table { width: 100%; border-collapse: collapse; border-spacing: 0; overflow: hidden; border-radius: calc(var(--radius) - 4px); }
+    thead { background: rgba(148,163,184,.08); }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid rgba(148,163,184,.15); vertical-align: top; }
+    tbody tr:hover { background: rgba(148,163,184,.04); }
+
+    .footer { text-align: center; color: var(--muted); font-size: .9rem; padding: 30px 0 60px; }
+    .cta {
+      display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #0b1220; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      padding: 10px 14px; border-radius: 10px; font-weight: 600; box-shadow: 0 10px 25px rgba(34,211,238,.25);
+    }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: rgba(148,163,184,.15); padding: 2px 6px; border-radius: 6px; border: 1px solid rgba(148,163,184,.3); }
+    section { scroll-margin-top: 90px; }
+    a { word-break: break-word; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Jhoys Alcántara</div>
+      <nav aria-label="Secciones">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#idiomas">Idiomas</a>
+        <a href="#horario">Horario</a>
+        <a href="#formacion">Formación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Jhoys Argenis Alcántara Vargas</h1>
+      <p class="muted">Estudiante de Licenciatura en Informática | Santo Domingo Norte</p>
+    </div>
+
+    <div class="grid">
+      <section id="sobre-mi" class="card span-7" aria-labelledby="titulo-sobre-mi">
+        <h2 id="titulo-sobre-mi">Sobre mí</h2>
+        <p>
+          Soy estudiante de <strong>Licenciatura en Informática</strong> en la <strong>Universidad Autónoma de Santo Domingo</strong> (UASD).
+          Me interesan la ciberseguridad, el soporte técnico y el desarrollo de software.
+        </p>
+        <p class="muted">Semestre: <strong>2025-20</strong></p>
+      </section>
+
+      <section id="contacto" class="card span-5" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <ul class="list">
+          <li><span class="badge">Tel</span> <a href="tel:+18298695312">(829) 869‑5312</a></li>
+          <li><span class="badge">Email</span> <a href="mailto:jhoys05@gmail.com">jhoys05@gmail.com</a></li>
+          <li><span class="badge">Dirección</span> C/ Segunda, No. 17, El Milloncito, Sabana Perdida, Santo Domingo Norte.</li>
+        </ul>
+      </section>
+
+      <section id="idiomas" class="card span-5" aria-labelledby="titulo-idiomas">
+        <h2 id="titulo-idiomas">Idiomas</h2>
+        <ul class="list">
+          <li><span class="badge">Español</span> Nativo</li>
+          <li><span class="badge">Inglés</span> Intermedio</li>
+        </ul>
+      </section>
+
+      <section id="horario" class="card span-7" aria-labelledby="titulo-horario">
+        <h2 id="titulo-horario">Horario académico 2024-20</h2>
+        <table aria-describedby="nota-horario">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Hora</th>
+              <th>Aula / Lugar</th>
+              <th>Asignatura / Sección</th>
+              <th>Instructor(a)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td>
+              <td>6:00 PM – 7:50 PM</td>
+              <td>EDIFICIO AMARO MOREJON 302</td>
+              <td>Ingeniería de Software II – INF 5250 – Z03</td>
+              <td>Noemí Cuevas Sánchez</td>
+            </tr>
+            <tr>
+              <td>Miércoles</td>
+              <td>7:00 AM – 8:50 AM</td>
+              <td>LABORATORIO DE INFORMÁTICA 103</td>
+              <td>Práctica (Laboratorio)</td>
+              <td>Radhames Silverio González</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="nota-horario" class="muted">Nota: verifica cambios de aula u horario con tu escuela antes de cada semana.</p>
+      </section>
+
+      <section id="formacion" class="card span-12" aria-labelledby="titulo-formacion">
+        <h2 id="titulo-formacion">Formación académica</h2>
+        <ul class="list">
+          <li>
+            <span class="badge">2013–Actual</span>
+            <div>
+              Licenciatura en Informática — Universidad Autónoma de Santo Domingo (UASD)
+            </div>
+          </li>
+          <li>
+            <span class="badge">2024</span>
+            <div>
+              Taller de Introducción a la Ciberseguridad — ITLA
+            </div>
+          </li>
+          <li>
+            <span class="badge">2024</span>
+            <div>
+              IT Essentials — CISCO
+            </div>
+          </li>
+          <li>
+            <span class="badge">2024</span>
+            <div>
+              Soporte Técnico TI — ITLA
+            </div>
+          </li>
+          <li>
+            <span class="badge">2024</span>
+            <div>
+              NS2 Network Security Associate — Fortinet
+            </div>
+          </li>
+          <li>
+            <span class="badge">2022</span>
+            <div>
+              NS1 Network Security Associate — Fortinet
+            </div>
+          </li>
+          <li>
+            <span class="badge">2022</span>
+            <div>
+              Information Security Awareness — Fortinet
+            </div>
+          </li>
+          <li>
+            <span class="badge">2018</span>
+            <div>
+              Programa de Inglés de Inmersión para la Competitividad — MESCYT
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card span-12" aria-labelledby="titulo-descarga">
+        <p>
+          <a class="cta" href="#contacto">¿Dudas? Contáctame</a>
+        </p>
+      </section>
+    </div>
+
+    <p class="footer">© <span id="y"></span> Jhoys Alcántara · Última actualización: <time id="fecha"></time></p>
+  </main>
+
+  <script>
+    // Actualiza año y fecha de manera automática en el footer (solo visual)
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    const fmt = new Intl.DateTimeFormat('es-DO', { dateStyle: 'long' });
+    document.getElementById('fecha').textContent = fmt.format(d);
+  </script>
+</body>
+</html>
